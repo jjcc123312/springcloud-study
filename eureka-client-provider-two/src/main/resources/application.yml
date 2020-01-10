@@ -1,0 +1,11 @@
+server:
+  port: ${port:8000}
+
+spring:
+  application:
+    name: eureka-produce
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/

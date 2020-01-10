@@ -1,0 +1,29 @@
+server:
+  #  注册中心的端口
+  port: 7000
+
+# 注册中心配置
+eureka:
+  server:
+    # 关闭注册中心的自我保护模式。建议只在开发环境中开启。；
+    # 每分钟收到的心跳续约量少于一定的阈值，并且持续15分钟，就会触发自我保护模式
+    # 自我保护模式下，会保护服务注册表的信息，不再注销任何服务实例。
+    enable-self-preservation: true
+  instance:
+    # 主机名称
+    hostname: localhost
+  client:
+    # 是否注册到服务器，因为它本身就是服务器，所需无需注册到服务器。
+    # 做集群需要设置为true
+    register-with-eureka: false
+    # 是否获取注册中心的注册信息
+    # Eureka Server做集群需要设置为true
+    fetch-registry: false
+    serviceUrl:
+      # 自己作为服务器，公布出来的地址。后续微服务要把自己注册到Eureka Server，需要访问这个地址。
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+spring:
+  application:
+    # 微服务的名称。
+    name: eureka-server
