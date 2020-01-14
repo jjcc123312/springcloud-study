@@ -5,12 +5,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 /**
+ * feign通过创建一个接口并通过@FeignClient注解实现远程调用
  * @author Jjcc
  * @version 1.0.0
  * @className IHelloRemote.java
  * @createTime 2020年01月09日 22:58:00
  */
-@FeignClient(name = "eureka-produce")
+@FeignClient(name = "eureka-produce", fallback = HelloRemoteImpl.class)
 public interface IHelloRemote {
 
     /**
