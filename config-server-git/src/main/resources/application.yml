@@ -1,0 +1,15 @@
+server:
+  port: 12000
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jjcc123312/springcloud-study.git # Git\u4ED3\u5E93\u5730\u5740
+          search-paths: springcloud-config    # Git\u4ED3\u5E93\u76EE\u5F55
+#          username:    # git\u8D26\u53F7
+#          passphrase:  # git\u5BC6\u7801
+      label: master     # \u914D\u7F6E\u4ED3\u5E93\u7684\u5206\u652F
