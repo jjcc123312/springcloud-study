@@ -13,3 +13,7 @@ spring:
 #          username:    # git\u8D26\u53F7
 #          passphrase:  # git\u5BC6\u7801
       label: master     # \u914D\u7F6E\u4ED3\u5E93\u7684\u5206\u652F
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/

@@ -1,7 +1,16 @@
 spring:
   cloud:
     config:
-      uri: http://localhost:12000 # 配置中心的具体地址，即config-server
+#      uri: http://localhost:12000
+      # 配置中心的具体地址，即config-server。配置服务做集群时，注册到eureka服务注册中心时，取消指向config server的uri。
       name: config-client         # 对应{application}部分
       profile: dev                # 对应{profile}部分
       label: master               # 对应{label}部分，即Git的分支，如果配置中心使用的是本地存储，则该参数无用
+      discovery:
+        enabled: true             # 开启 config client 服务发现支持。
+        service-id: config-server # 指定 Server 端的 name, 也就是 Server 端 spring.application.name 的值
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/
