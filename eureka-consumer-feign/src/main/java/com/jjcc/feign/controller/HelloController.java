@@ -27,7 +27,7 @@ public class HelloController {
     private String hello;
 
     @Autowired
-    public HelloController(@Qualifier("IHelloRemote") IHelloRemote iHelloRemote) {
+    public HelloController(IHelloRemote iHelloRemote) {
         this.helloRemote = iHelloRemote;
     }
 

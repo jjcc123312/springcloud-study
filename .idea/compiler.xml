@@ -6,13 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eureka-client-provider-two" />
+        <module name="config-server-git" />
         <module name="eureka-server" />
         <module name="eureka-consumer-feign" />
-        <module name="eureka-consummer-one" />
+        <module name="eureka-client-provider-two" />
+        <module name="config-client" />
+        <module name="api-gateway-zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api-gateway-zuul" target="1.8" />
+      <module name="config-client" target="1.8" />
+      <module name="config-server-git" target="1.8" />
       <module name="eureka-client-provider-two" target="1.8" />
       <module name="eureka-consumer-feign" target="1.8" />
       <module name="eureka-consummer-one" target="1.8" />
@@ -22,6 +27,9 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway-zuul" options="-parameters" />
+      <module name="config-client" options="-parameters" />
+      <module name="config-server-git" options="-parameters" />
       <module name="eureka-client-provider-two" options="-parameters" />
       <module name="eureka-consumer-feign" options="-parameters" />
       <module name="eureka-consummer-one" options="-parameters" />

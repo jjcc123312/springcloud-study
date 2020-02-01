@@ -6,7 +6,6 @@
     <!-- 子工程引用，创建子项目后在此添加即可 -->
     <modules>
         <module>eureka-server</module>
-        <module>eureka-consummer-one</module>
         <module>eureka-client-provider-two</module>
         <module>eureka-consumer-feign</module>
     </modules>
