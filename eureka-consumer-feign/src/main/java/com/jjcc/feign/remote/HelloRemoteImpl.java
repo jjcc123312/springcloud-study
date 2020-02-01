@@ -13,6 +13,6 @@ import org.springframework.stereotype.Component;
 public class HelloRemoteImpl implements IHelloRemote {
     @Override
     public String hello(String name) {
-        return "Hello World！！！";
+        return "Hello World：" + name;
     }
 }

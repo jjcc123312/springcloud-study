@@ -1,14 +1,27 @@
+server:
+  port: 9000
+
 spring:
   application:
     name: eureka-consumer
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:7000/eureka/ # \u6307\u5B9A Eureka \u6CE8\u518C\u4E2D\u5FC3\u7684\u5730\u5740
-server:
-  port: 9000 # \u5206\u522B\u4E3A 9000\u30019001\u30019002
+  rabbitmq:       # rabbitmq的相关配置。
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    bus:
+      trace:
+        enabled: true # 开启消息跟踪
 
 feign:
   hystrix:
     # feign开启熔断
     enabled: true
+
+# springboot1.5x 以上默认开通了安全认证，所以需要添加这个配置。用于config client端刷新配置文件的url
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
