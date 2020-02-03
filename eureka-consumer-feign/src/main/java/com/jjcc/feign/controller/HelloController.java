@@ -33,7 +33,7 @@ public class HelloController {
 
     @GetMapping("/{name}")
     public String hello1(@PathVariable String name) {
-
+        System.out.println("123321!");
         return helloRemote.hello(name);
     }
 
