@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: gateway-service
+          uri: lb://EUREKA-CONSUMER
+          order: 0
+          predicates:
+            - Path=/customer/**
+          filters:
+            - StripPrefix=1
+            - AddResponseHeader=X-Response-Default-Foo, Default-Bar
+
+server:
+  port: 15000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/ #服务注册中心的地址
+logging:
+  level:
+    org.springframework.cloud.gateway: debug # 调整日志级别
+

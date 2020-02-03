@@ -1,10 +1,10 @@
-package com.jjcc.consummer;
+package com.jjcc.gateway;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EurekaConsummerOneApplicationTests {
+class ApiGatewayApplicationTests {
 
     @Test
     void contextLoads() {

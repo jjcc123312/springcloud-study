@@ -11,10 +11,12 @@
         <module name="eureka-consumer-feign" />
         <module name="eureka-client-provider-two" />
         <module name="config-client" />
+        <module name="api-gateway" />
         <module name="api-gateway-zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="api-gateway" target="1.8" />
       <module name="api-gateway-zuul" target="1.8" />
       <module name="config-client" target="1.8" />
       <module name="config-server-git" target="1.8" />
@@ -27,6 +29,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
       <module name="api-gateway-zuul" options="-parameters" />
       <module name="config-client" options="-parameters" />
       <module name="config-server-git" options="-parameters" />
