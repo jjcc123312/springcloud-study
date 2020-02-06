@@ -7,11 +7,19 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: gateway-service
-          uri: lb://EUREKA-CONSUMER
+        - id: gateway-service         # 璺敱id
+          uri: https://www.baidu.com   # uri
           order: 0
           predicates:
-            - Path=/customer/**
+#            - After=2020-03-01T00:00:00+08:00[Asia/Shanghai]
+#            - Before=2020-03-01T00:00:00+08:00[Asia/Shanghai]
+#            - Between=2020-02-06T00:00:00+08:00[Asia/Shanghai],2020-03-01T00:00:00+08:00[Asia/Shanghai]
+#            - Cookie=sessionId, test
+#            - Header=X-request-Id, \d+
+#            - Host=**.baidu.com
+            - Method=GET
+#            - Path=/customer/{segment},/foo/{segment}
+            - RemoteAddr=192.168.0.1/0
           filters:
             - StripPrefix=1
             - AddResponseHeader=X-Response-Default-Foo, Default-Bar
@@ -21,8 +29,8 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7000/eureka/ #服务注册中心的地址
+      defaultZone: http://localhost:7000/eureka/ #鏈嶅姟娉ㄥ唽涓績鐨勫湴鍧�
 logging:
   level:
-    org.springframework.cloud.gateway: debug # 调整日志级别
+    org.springframework.cloud.gateway: debug # 璋冩暣鏃ュ織绾у埆
 

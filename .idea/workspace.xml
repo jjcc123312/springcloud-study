@@ -1,31 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7f78cc7-f299-43a4-970c-add9baa08a00" name="Default Changelist" comment="spring cloud config服务端高可用实现version：1.2；&#10;刷新config server端，而不是刷新config client。保证了微服务架构中各微服务应用的职责单一性。&#10;刷新config client使得微服务应用额外的承担了配置刷新的职责。">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_addons_reactor_extra_3_2_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_gateway_core_2_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_gateway_2_1_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/jjcc/gateway/ApiGatewayApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/test/java/com/jjcc/gateway/ApiGatewayApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="e7f78cc7-f299-43a4-970c-add9baa08a00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-consummer-one/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-consummer-one/src/main/java/com/jjcc/consummer/EurekaConsummerOneApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-consummer-one/src/main/java/com/jjcc/consummer/controller/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-consummer-one/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-consummer-one/src/test/java/com/jjcc/consummer/EurekaConsummerOneApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +70,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.14609376" />
     <property name="project.structure.side.proportion" value="0.21866423" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
@@ -160,27 +139,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConfigClientApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="config-client" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.config.ConfigClientApplication" />
-      <option name="VM_PARAMETERS" value="-Dserver.port=13001" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ConfigClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="config-client" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.config.ConfigClientApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConfigServerGitApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="config-server-git" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.config.ConfigServerGitApplication" />
-      <option name="VM_PARAMETERS" value="-Dserver.port=12001" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -235,8 +196,6 @@
       <item itemvalue="Spring Boot.EurekaClientProviderTwoApplication 8001" />
       <item itemvalue="Spring Boot.ConfigServerGitApplication" />
       <item itemvalue="Spring Boot.ConfigClientApplication" />
-      <item itemvalue="Spring Boot.ConfigServerGitApplication (1)" />
-      <item itemvalue="Spring Boot.ConfigClientApplication (1)" />
       <item itemvalue="Spring Boot.ApiGatewayZuulApplication" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
     </list>
@@ -261,24 +220,9 @@
     <option name="viewStates">
       <list>
         <serviceView>
-          <option name="contentProportion" value="0.23333333" />
+          <option name="contentProportion" value="0.18797815" />
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@179082ef" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@179082ef" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a584ad60" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@179082ef" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@f4f8ad73" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
           <option name="viewType" value="contributor" />
@@ -336,7 +280,10 @@
       <workItem from="1580396183100" duration="4095000" />
       <workItem from="1580445940974" duration="2908000" />
       <workItem from="1580534974070" duration="9797000" />
-      <workItem from="1580703915145" duration="7503000" />
+      <workItem from="1580703915145" duration="8706000" />
+      <workItem from="1580793223246" duration="8845000" />
+      <workItem from="1580878398879" duration="1952000" />
+      <workItem from="1580982195663" duration="1522000" />
     </task>
     <task id="LOCAL-00001" summary="springcloud框架demo">
       <created>1578621846272</created>
@@ -450,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580714138975</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="spring cloud gateway代码示例。version：1.0">
+      <created>1580738062251</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1580738062251</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,6 +441,7 @@
     <MESSAGE value="spring cloud：eureka server、eureka client、config server配置更改" />
     <MESSAGE value="初探spring cloud zuul" />
     <MESSAGE value="spring cloud zuul网关代码。" />
-    <option name="LAST_COMMIT_MESSAGE" value="spring cloud zuul网关代码。" />
+    <MESSAGE value="spring cloud gateway代码示例。version：1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring cloud gateway代码示例。version：1.0" />
   </component>
 </project>
