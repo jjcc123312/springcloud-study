@@ -6,10 +6,12 @@ spring:
       discovery:
         locator:
           enabled: true
+      default-filters:
+#        - Elapsed=true               # 自定义过滤器，适用于所有在配置文件中定义的过滤器。经测试，并不适用于自定义过滤器。
       routes:
         - id: gateway-service         # 路由id
-          uri: https://www.baidu.com   # uri
-          order: 0
+          uri: lb://EUREKA-CONSUMER   # uri
+          order: 1
           predicates:
 #            - After=2020-03-01T00:00:00+08:00[Asia/Shanghai]
 #            - Before=2020-03-01T00:00:00+08:00[Asia/Shanghai]
@@ -18,11 +20,19 @@ spring:
 #            - Header=X-request-Id, \d+
 #            - Host=**.baidu.com
             - Method=GET
-#            - Path=/customer/{segment},/foo/{segment}
+            - Path=/customer/**
             - RemoteAddr=192.168.0.1/0
           filters:
             - StripPrefix=1
-            - AddResponseHeader=X-Response-Default-Foo, Default-Bar
+#            - AddResponseHeader=X-Response-Default-Foo, Default-Bar
+        - id: ageteway-service2
+          uri: lb://EUREKA-CONSUMER
+          order: 0
+          predicates:
+            - Path=/customer1/**
+          filters:
+            - StripPrefix=1
+            - Elapsed=true  # 自定义过滤器工厂
 
 server:
   port: 15000
