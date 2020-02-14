@@ -1,9 +1,8 @@
-package com.jjcc.gateway.filter.chain;
+package com.jjcc.gateway.filter.customroutes;
 
 import com.jjcc.gateway.filter.RequestFilter;
-import com.jjcc.gateway.filter.factory.ElapsedGatewayFilterFactory;
+import com.jjcc.gateway.filter.filterfactory.ElapsedGatewayFilterFactory;
 import com.jjcc.gateway.filter.globalfilter.GlobalFilterOne;
-import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;

@@ -1,0 +1,19 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/ #服务注册中心的地址
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true # spring cloud gateway与eureka组合使用。
+      routes:
+        - id: gateway-service-0
+          uri: lb://EUREKA-CONSUMER   # uri
+          predicates:
+            - Method=GET
+            - Path=/customer/**
+          filters:
+            - StripPrefix=1

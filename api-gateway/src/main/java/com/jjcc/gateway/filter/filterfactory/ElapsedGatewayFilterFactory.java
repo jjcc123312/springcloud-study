@@ -1,4 +1,4 @@
-package com.jjcc.gateway.filter.factory;
+package com.jjcc.gateway.filter.filterfactory;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -11,7 +11,7 @@ import java.util.*;
 /**
  * 自定义单个参数的过滤器工厂
  * 需要继承 AbstractGatewayFilterFactory类。
- * 注意：工厂类中定义的参数名 "withParam"，即key名必须与内部类中的参数名（用于接收配置文件中参数值得变量）一致。
+ * 注意：工厂类中定义的参数名 "withParam"，即key名必须与内部类中的参数名（用于接收配置文件中参数值的变量）一致。
  * @author Administrator
  * @version 1.0.0
  * @description

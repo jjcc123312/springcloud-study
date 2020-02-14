@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: spring-cloud-gateway
+
+server:
+  port: 15001
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug # 调整日志级别
