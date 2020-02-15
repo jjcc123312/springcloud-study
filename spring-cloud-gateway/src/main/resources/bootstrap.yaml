@@ -17,3 +17,15 @@ spring:
             - Path=/customer/**
           filters:
             - StripPrefix=1
+            - name: RequestRateLimiter
+              args:
+                # 用于限流的键的解析器的Bean对象名称。它使用 SpEL 表达式根据#{@beanName}从 Spring 容器中获取 Bean 对象。
+                key-resolver: '#{@uriKeyResolver}'
+                # 令牌桶每秒填充的平均速率。
+                redis-rate-limiter.replenishRate: 1
+                # 令牌桶的最大容量数
+                redis-rate-limiter.burstCapacity: 5
+  redis:
+    host: localhost
+    port: 6379
+    database: 0

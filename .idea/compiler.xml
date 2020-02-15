@@ -10,6 +10,7 @@
         <module name="eureka-server" />
         <module name="eureka-consumer-feign" />
         <module name="eureka-client-provider-two" />
+        <module name="spring-cloud-gateway" />
         <module name="config-client" />
         <module name="api-gateway" />
         <module name="api-gateway-zuul" />
@@ -24,6 +25,7 @@
       <module name="eureka-consumer-feign" target="1.8" />
       <module name="eureka-consummer-one" target="1.8" />
       <module name="eureka-server" target="1.8" />
+      <module name="spring-cloud-gateway" target="1.8" />
       <module name="springcloud-study" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -37,6 +39,7 @@
       <module name="eureka-consumer-feign" options="-parameters" />
       <module name="eureka-consummer-one" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="spring-cloud-gateway" options="-parameters" />
     </option>
   </component>
 </project>

@@ -4,6 +4,7 @@ import com.jjcc.gateway.filter.customfilter.RateLimitByIPGatewayFilter;
 import com.jjcc.gateway.filter.customfilter.RequestFilter;
 import com.jjcc.gateway.filter.globalfilter.CustomGlobalFilter;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
+import org.springframework.cloud.gateway.filter.factory.RequestRateLimiterGatewayFilterFactory;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
@@ -67,7 +68,7 @@ public class Routes {
      * @return org.springframework.cloud.gateway.route.RouteLocator
      * @createTime 2020/2/12 0012 23:03
      */
-    @Bean
+    @Bean()
     public RouteLocator rateLimitByIpGatewayFilter(RouteLocatorBuilder routeLocatorBuilder) {
         return routeLocatorBuilder.routes().route(r ->
                 r.path("/throttle/customer/**")

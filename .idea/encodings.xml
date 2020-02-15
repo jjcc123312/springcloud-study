@@ -10,5 +10,6 @@
     <file url="file://$PROJECT_DIR$/eureka-client-provider-two" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-consumer-feign" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-gateway" charset="UTF-8" />
   </component>
 </project>
