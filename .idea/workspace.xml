@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7f78cc7-f299-43a4-970c-add9baa08a00" name="Default Changelist" comment="spring cloud gateway：predicate 断言代码示例">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_vladimir_bukhtoyarov_bucket4j_core_4_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_1_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_reactive_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-cloud-gateway/src/main/java/com/jjcc/gateway/filter/ratelimiter/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="e7f78cc7-f299-43a4-970c-add9baa08a00" name="Default Changelist" comment="gateway通过RequestRateLimiter使用Redis实现限流代码示例">
+      <change afterPath="$PROJECT_DIR$/spring-cloud-gateway/src/main/java/com/jjcc/gateway/fallback/FallbackController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud-gateway/src/main/java/com/jjcc/gateway/filter/customroutes/Routes.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-gateway/src/main/java/com/jjcc/gateway/filter/customroutes/Routes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-consumer-feign/src/main/java/com/jjcc/feign/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-consumer-feign/src/main/java/com/jjcc/feign/controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-cloud-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-gateway/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-cloud-gateway/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-gateway/src/main/resources/bootstrap.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -237,27 +225,7 @@
       <serviceView>
         <option name="contentProportion" value="0.2284153" />
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@449c4458" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@449c4458" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4dd6a0d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@449c4458" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2b9623e7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@449c4458" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@28d61697" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -318,7 +286,8 @@
       <workItem from="1581499365382" duration="11276000" />
       <workItem from="1581651467945" duration="599000" />
       <workItem from="1581658508910" duration="12889000" />
-      <workItem from="1581750494841" duration="1640000" />
+      <workItem from="1581750494841" duration="12784000" />
+      <workItem from="1581839222374" duration="1890000" />
     </task>
     <task id="LOCAL-00001" summary="springcloud框架demo">
       <created>1578621846272</created>
@@ -460,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581658899871</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="gateway通过RequestRateLimiter使用Redis实现限流代码示例">
+      <created>1581752198604</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1581752198604</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,6 +480,7 @@
     <MESSAGE value="spring cloud gateway：predicate 断言代码示例" />
     <MESSAGE value="gateway内置过滤器与自定义过滤器代码示例" />
     <MESSAGE value="gateway限流：通过bucket4j实现。" />
-    <option name="LAST_COMMIT_MESSAGE" value="gateway限流：通过bucket4j实现。" />
+    <MESSAGE value="gateway通过RequestRateLimiter使用Redis实现限流代码示例" />
+    <option name="LAST_COMMIT_MESSAGE" value="gateway通过RequestRateLimiter使用Redis实现限流代码示例" />
   </component>
 </project>
