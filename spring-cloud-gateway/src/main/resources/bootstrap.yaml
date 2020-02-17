@@ -1,3 +1,6 @@
+hystrix.command.fallbackcmd.execution.isolation.thread.timeoutInMilliseconds: 5000
+
+
 eureka:
   client:
     service-url:
@@ -22,14 +25,28 @@ spring:
                 # 用于限流的键的解析器的Bean对象名称。它使用 SpEL 表达式根据#{@beanName}从 Spring 容器中获取 Bean 对象。
                 key-resolver: '#{@uriKeyResolver}'
                 # 令牌桶每秒填充的平均速率。
-                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.replenishRate: 10
                 # 令牌桶的最大容量数
-                redis-rate-limiter.burstCapacity: 5
+                redis-rate-limiter.burstCapacity: 20
             - name: Hystrix
               args:
                 name: fallbackcmd
                 fallbackUri: forward:/fallback
+#            - name: Retry
+#              args:
+#                retries: 22
+#                series:
+#                  - SERVER_ERROR
+#                statuses:
+#                  - BAD_GATEWAY
+#                methods:
+#                  - GET
+#                exceptions:
+#                  - java.io.IOException
+#                  - java.lang.RuntimeException
+
   redis:
     host: localhost
     port: 6379
     database: 0
+

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7f78cc7-f299-43a4-970c-add9baa08a00" name="Default Changelist" comment="gateway通过RequestRateLimiter使用Redis实现限流代码示例">
-      <change afterPath="$PROJECT_DIR$/spring-cloud-gateway/src/main/java/com/jjcc/gateway/fallback/FallbackController.java" afterDir="false" />
+    <list default="true" id="e7f78cc7-f299-43a4-970c-add9baa08a00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-client-provider-two/src/main/java/com/jjcc/provider/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-client-provider-two/src/main/java/com/jjcc/provider/controller/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/eureka-consumer-feign/src/main/java/com/jjcc/feign/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-consumer-feign/src/main/java/com/jjcc/feign/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-gateway/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-cloud-gateway/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-cloud-gateway/src/main/resources/bootstrap.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -287,7 +286,8 @@
       <workItem from="1581651467945" duration="599000" />
       <workItem from="1581658508910" duration="12889000" />
       <workItem from="1581750494841" duration="12784000" />
-      <workItem from="1581839222374" duration="1890000" />
+      <workItem from="1581839222374" duration="14399000" />
+      <workItem from="1581920335086" duration="601000" />
     </task>
     <task id="LOCAL-00001" summary="springcloud框架demo">
       <created>1578621846272</created>
@@ -436,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581752198604</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="gateway实现hystrix熔断代码示例">
+      <created>1581841306422</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1581841306423</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,6 +488,7 @@
     <MESSAGE value="gateway内置过滤器与自定义过滤器代码示例" />
     <MESSAGE value="gateway限流：通过bucket4j实现。" />
     <MESSAGE value="gateway通过RequestRateLimiter使用Redis实现限流代码示例" />
-    <option name="LAST_COMMIT_MESSAGE" value="gateway通过RequestRateLimiter使用Redis实现限流代码示例" />
+    <MESSAGE value="gateway实现hystrix熔断代码示例" />
+    <option name="LAST_COMMIT_MESSAGE" value="gateway实现hystrix熔断代码示例" />
   </component>
 </project>

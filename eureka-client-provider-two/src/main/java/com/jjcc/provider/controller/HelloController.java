@@ -25,7 +25,8 @@ public class HelloController {
 
     @GetMapping("{name}")
     public String hello(@PathVariable String name) {
-        return "Hello，" + name + "。当前时间：" + LocalDateTime.now() + "端口号：" + port;
+        throw new RuntimeException("异常~~");
+//        return "Hello，" + name + "。当前时间：" + LocalDateTime.now() + "端口号：" + port;
     }
 
 
